@@ -12,7 +12,10 @@ function Header() {
           <img className={styles.logo} src={logoUrl} alt="Logo" />
         </a>
         <div>
-          <a href="#" className={styles.github}>
+          <a
+            href="https://github.com/ADPenrose/operadores-python-3"
+            className={styles.github}
+          >
             <GitHub size={26} />
             <VisuallyHidden>Ve el código fuente</VisuallyHidden>
           </a>
