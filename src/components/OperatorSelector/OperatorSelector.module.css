@@ -1,0 +1,45 @@
+.wrapper {
+  margin-top: 1.2rem;
+  max-width: 630px;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.operator {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #fbe3fb;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.operator:focus-visible {
+  outline: 2px auto #3ab6b6;
+  outline-offset: 4px;
+}
+
+.operator:hover {
+  background-color: #f6d3f6;
+}
+
+.background {
+  position: absolute;
+  border-radius: 4px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  background-color: #ffdaff;
+  transform-origin: center center;
+  transition: all 0.2s;
+}
+
+.operator:hover .background {
+  background-color: #f6d3f6;
+  transform: scale(1.15);
+}
