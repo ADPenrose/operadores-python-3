@@ -10,7 +10,7 @@ function OperatorSearch() {
         <div className={styles["wrapper-description"]}>
           <h1 className={styles.h1}>Operadores de Python 3</h1>
           <p className={`${styles.subtitle1} ${styles.info}`}>
-            Escribe un operador de Python para obtener más información:
+            Escribe un operador para obtener más información:
           </p>
         </div>
 

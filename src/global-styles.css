@@ -62,3 +62,12 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*
+ Global variables
+*/
+:root {
+  --color-primary-1: #fbe3fb;
+  --color-primary-2: #f6d3f6;
+  --color-secondary-1: #3ab6b6;
+}

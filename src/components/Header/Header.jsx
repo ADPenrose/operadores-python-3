@@ -14,7 +14,7 @@ function Header() {
         <div>
           <a href="#" className={styles.github}>
             <GitHub size={26} />
-            <VisuallyHidden>See the source code</VisuallyHidden>
+            <VisuallyHidden>Ve el código fuente</VisuallyHidden>
           </a>
         </div>
       </div>
