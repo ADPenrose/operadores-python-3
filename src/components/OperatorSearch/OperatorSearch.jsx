@@ -1,5 +1,6 @@
 import OperatorSelector from "../OperatorSelector";
 import SearchBar from "../SearchBar";
+import OperatorInfo from "../OperatorInfo";
 
 import styles from "./OperatorSearch.module.css";
 
@@ -21,6 +22,8 @@ function OperatorSearch() {
         </p>
 
         <OperatorSelector />
+
+        <OperatorInfo />
       </main>
     </>
   );

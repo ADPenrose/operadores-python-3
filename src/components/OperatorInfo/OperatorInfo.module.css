@@ -1,0 +1,58 @@
+.wrapper {
+  max-width: 630px;
+  padding: 4rem 0 2rem 0;
+}
+
+.wrapper p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.content {
+  font-family: "Inter", sans-serif;
+}
+
+.code {
+  background-color: var(--color-bg-code);
+}
+
+.operator-title {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.operator-title span {
+  color: var(--color-operator-info);
+  font-weight: 700;
+}
+
+.operator-more-info {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-operator-docs-1);
+}
+
+.operator-more-info a {
+  position: relative;
+  display: inline-block;
+}
+
+.operator-more-info a:link,
+.operator-more-info a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.operator-more-info a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: var(--color-operator-docs-2);
+}

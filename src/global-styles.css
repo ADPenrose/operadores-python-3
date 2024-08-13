@@ -21,7 +21,7 @@ body {
   font-size: 62.5%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: "Inter", sans-serif;
+  font-family: "Source Code Pro", sans-serif;
 }
 /*
   5. Improve media defaults
@@ -67,7 +67,12 @@ h6 {
  Global variables
 */
 :root {
+  --bg-color: #fff;
   --color-primary-1: #fbe3fb;
   --color-primary-2: #f6d3f6;
   --color-secondary-1: #3ab6b6;
+  --color-operator-info: #d90086;
+  --color-operator-docs-1: #fff4b6;
+  --color-operator-docs-2: #c0a820;
+  --color-bg-code: #f0f1f1;
 }
