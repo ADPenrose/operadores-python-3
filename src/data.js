@@ -1,5 +1,16 @@
 export const OPERATORS = [
-  { id: 1, name: "adición", operator: "+" },
+  {
+    id: 1,
+    name: "adición",
+    operator: "+",
+    description: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus aliquam lacus quis posuere.",
+      "Cras vestibulum, nunc at laoreet interdum, felis felis viverra enim, vitae mollis lacus ex sit amet sem.",
+      "Aliquam odio tellus, semper eu rhoncus non, egestas eu purus. Mauris eu ligula ultricies, fringilla diam nec, dignissim est. Quisque faucibus velit orci, sit amet ultrices dolor rutrum vitae.",
+    ],
+    code: `print(1 + 1) # 2\nprint("hola" + "mundo") # holamundo`,
+    docs: "https://docs.python.org/3/reference/lexical_analysis.html#operators",
+  },
   { id: 2, name: "sustracción", operator: "-" },
   { id: 3, name: "multiplicación", operator: "*" },
   { id: 4, name: "división", operator: "/" },

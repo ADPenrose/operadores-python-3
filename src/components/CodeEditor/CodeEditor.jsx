@@ -5,11 +5,7 @@ import { highlight, languages } from "prismjs";
 import "prismjs/components/prism-python";
 import "./custom-prism-theme.css";
 
-function CodeEditor() {
-  const [code] = React.useState(
-    `print(1 + 1) # 2\nprint("hola" + "mundo") # holamundo`,
-  );
-
+function CodeEditor({ code }) {
   return (
     <Editor
       value={code}

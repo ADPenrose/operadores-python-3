@@ -1,10 +1,23 @@
+import React from "react";
+
+import { OperatorContext } from "../OperatorProvider";
 import OperatorSelector from "../OperatorSelector";
 import SearchBar from "../SearchBar";
 import OperatorInfo from "../OperatorInfo";
 
+import { OPERATORS } from "../../data";
+
 import styles from "./OperatorSearch.module.css";
 
 function OperatorSearch() {
+  const { selectedOperator } = React.useContext(OperatorContext);
+  const isValidOperator = OPERATORS.some(
+    ({ operator }) => operator === selectedOperator,
+  );
+  const operatorInfo = OPERATORS.find(
+    ({ operator }) => operator === selectedOperator,
+  );
+
   return (
     <>
       <main className={styles.wrapper}>
@@ -17,13 +30,17 @@ function OperatorSearch() {
 
         <SearchBar />
 
-        <p className={`${styles.subtitle2} ${styles.info}`}>
-          O, selecciona uno:
-        </p>
+        {isValidOperator ? (
+          <OperatorInfo operatorInfo={operatorInfo} />
+        ) : (
+          <>
+            <p className={`${styles.subtitle2} ${styles.info}`}>
+              O, selecciona uno:
+            </p>
 
-        <OperatorSelector />
-
-        <OperatorInfo />
+            <OperatorSelector />
+          </>
+        )}
       </main>
     </>
   );

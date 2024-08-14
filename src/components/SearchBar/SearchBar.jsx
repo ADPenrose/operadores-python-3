@@ -1,9 +1,11 @@
 import React from "react";
+import { OperatorContext } from "../OperatorProvider";
 import { Search, X } from "react-feather";
 import styles from "./SearchBar.module.css";
 
 function SearchBar() {
-  const [search, setSearch] = React.useState("");
+  const { selectedOperator, setSelectedOperator, handleOperatorCleaning } =
+    React.useContext(OperatorContext);
 
   return (
     <div className={styles.wrapper}>
@@ -11,11 +13,20 @@ function SearchBar() {
       <input
         className={styles["search-input"]}
         type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        value={selectedOperator}
+        onChange={(e) => setSelectedOperator(e.target.value)}
       />
       {/* TODO: This should be a button that renders only when a search is made */}
-      <X className={styles["search-icon"]} size={24} />
+      {selectedOperator !== "" ? (
+        <button
+          onClick={handleOperatorCleaning}
+          className={styles["search-clear"]}
+        >
+          <X className={styles["search-icon"]} size={30} />
+        </button>
+      ) : (
+        <div className={styles.placeholder}></div>
+      )}
     </div>
   );
 }

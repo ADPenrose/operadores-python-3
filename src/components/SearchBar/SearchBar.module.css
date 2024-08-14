@@ -33,3 +33,17 @@
   font-size: 2rem;
   pointer-events: none;
 }
+
+.search-clear {
+  border: none;
+  background-color: transparent;
+}
+
+.search-clear:hover > .search-icon {
+  stroke: #ff0000;
+}
+
+.placeholder {
+  min-width: 39.97px;
+  min-height: 39.97px;
+}
