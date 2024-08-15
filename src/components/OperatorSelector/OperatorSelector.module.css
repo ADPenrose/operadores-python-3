@@ -27,6 +27,12 @@
   background-color: var(--color-primary-2);
 }
 
+.operator:link,
+.operator:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 .background {
   position: absolute;
   border-radius: 6px;

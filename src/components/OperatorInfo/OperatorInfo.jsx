@@ -1,26 +1,26 @@
 import CodeEditor from "../CodeEditor";
 import styles from "./OperatorInfo.module.css";
 
-function OperatorInfo({ operatorInfo }) {
+function OperatorInfo({ operator }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <h2 className={styles["operator-title"]}>
-          Este es el operador {operatorInfo.id < 18 && "de"}{" "}
-          <span>{operatorInfo.name}</span>.
+          Este es el operador {operator.id < 18 && "de"}{" "}
+          <span>{operator.name}</span>.
         </h2>
 
-        {operatorInfo.description.map((paragraph, index) => (
+        {operator.description.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>
 
-      <CodeEditor code={operatorInfo.code} />
+      <CodeEditor code={operator.code} />
 
-      {!!operatorInfo.docs && (
+      {!!operator.docs && (
         <div className={styles["operator-more-info"]}>
           Lee más acerca de este operador en la{" "}
-          <a href={operatorInfo.docs}>documentación oficial</a>.
+          <a href={operator.docs}>documentación oficial</a>.
         </div>
       )}
     </div>

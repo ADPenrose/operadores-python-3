@@ -1,5 +1,4 @@
 import React from "react";
-
 import { OperatorContext } from "../OperatorProvider";
 import OperatorSelector from "../OperatorSelector";
 import SearchBar from "../SearchBar";
@@ -11,12 +10,11 @@ import styles from "./OperatorSearch.module.css";
 
 function OperatorSearch() {
   const { selectedOperator } = React.useContext(OperatorContext);
+
   const isValidOperator = OPERATORS.some(
-    ({ operator }) => operator === selectedOperator,
+    ({ name }) => name === selectedOperator,
   );
-  const operatorInfo = OPERATORS.find(
-    ({ operator }) => operator === selectedOperator,
-  );
+  const operator = OPERATORS.find(({ name }) => name === selectedOperator);
 
   return (
     <>
@@ -31,7 +29,7 @@ function OperatorSearch() {
         <SearchBar />
 
         {isValidOperator ? (
-          <OperatorInfo operatorInfo={operatorInfo} />
+          <OperatorInfo operator={operator} />
         ) : (
           <>
             {selectedOperator !== "" && !isValidOperator && (
