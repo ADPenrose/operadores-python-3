@@ -39,6 +39,11 @@
   background-color: transparent;
 }
 
+.search-clear:focus-visible {
+  outline: 2px auto var(--color-secondary-1);
+  outline-offset: 4px;
+}
+
 .search-clear:hover > .search-icon {
   stroke: #ff0000;
 }

@@ -34,6 +34,12 @@ function OperatorSearch() {
           <OperatorInfo operatorInfo={operatorInfo} />
         ) : (
           <>
+            {selectedOperator !== "" && !isValidOperator && (
+              <p className={styles.noinfo}>
+                No se pudo encontrar información sobre el operador específicado,
+                perdón :c
+              </p>
+            )}
             <p className={`${styles.subtitle2} ${styles.info}`}>
               O, selecciona uno:
             </p>
